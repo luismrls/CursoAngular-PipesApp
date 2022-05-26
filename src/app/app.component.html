@@ -1,5 +1,15 @@
-<h1>{{ nombre | titlecase  }}</h1>
+<div class="text-layout">
+  <h1>{{ nombre | titlecase }}</h1>
+  <h1>{{ numero | number }}</h1>
+  <h1>{{ obj | json }}</h1>
+</div>
 
-<button (click)="mostrarNombre()">
-  cambiar nombre
+<button pButton pRipple type="button" label="Cambiar Nombre" class="p-button-raised p-button-help"
+  icon="pi pi-thumbs-up" iconPos="right">
 </button>
+
+<p-card header="Simple Card">
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt quae laudantium, est nobis autem aspernatur
+    inventore harum adipisci accusamus consequuntur reprehenderit incidunt sit fugit placeat ipsum tempora ratione quasi
+    distinctio?</p>
+</p-card>
