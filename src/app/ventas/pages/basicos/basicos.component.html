@@ -9,22 +9,19 @@
 <div class="grid">
 
     <div class="col-4">
-        <p-card header="uppercase"
-                [subheader]="nombreLower | uppercase">
+        <p-card header="uppercase" [subheader]="nombreLower | uppercase">
             {{ nombreLower | uppercase }}
         </p-card>
     </div>
 
     <div class="col-4">
-        <p-card header="lowercase"
-                [subheader]="nombreUpper | lowercase">
+        <p-card header="lowercase" [subheader]="nombreUpper | lowercase">
             {{ nombreUpper | lowercase }}
         </p-card>
     </div>
 
     <div class="col-4">
-        <p-card header="titlecase"
-                [subheader]="nombreCompleto | titlecase">
+        <p-card header="titlecase" [subheader]="nombreCompleto | titlecase">
             {{ nombreCompleto | titlecase}}
         </p-card>
     </div>
@@ -50,6 +47,13 @@
                 <li>fecha | date:'MMMM'</li>
                 <li>fecha | date:'MMMM dd, yyyy'</li>
             </ul>
+
+            <hr>
+            <ul>
+                <li>fecha | GMT-6</li>
+                <li>fecha | GMT-7</li>
+                <li>fecha | GMT-4 | Ingles</li>
+            </ul>
         </p-card>
     </div>
 
@@ -63,6 +67,14 @@
                 <li>{{ fecha | date:'MMMM' }}</li>
                 <li>{{ fecha | date:'MMMM dd, yyyy' }}</li>
             </ul>
+
+            <hr>
+            <ul>
+                <li>{{ fecha | date:'long':'GMT-6' }}</li>
+                <li>{{ fecha | date:'long':'GMT-7' }}</li>
+                <li>{{ fecha | date:'long':'GMT-4':'en' }}</li>
+            </ul>
         </p-card>
+
     </div>
 </div>
