@@ -17,13 +17,34 @@ export class NoComunesComponent {
     'femenino': 'invitarla'
   }
 
+  cambiarPersona() {
+
+    if(this.nombre === "Luis") {
+      this.nombre = 'Xilenna';
+      this.genero = 'femenino';
+    }else {
+      this.nombre = 'Luis';
+      this.genero = 'Masculino';
+    }
+    
+  }
+
   // i18nPlural
   clientes: string[] = ['Maria', 'Luis', 'Ximena', 'Xilena'];
+  
   clientesMapa = {
     '=0': 'no tenemos ningun cliente esperando.',
     '=1': 'tenemos 1 cliente esperando.',
     '=2': 'tenemos 2 clientes esperando.',
     'other': 'tenemos # clientes esperando.'
+  }
+
+  eliminarPersona() {
+    this.clientes.pop();
+  }
+
+  agregarPersona() {
+    this.clientes.push("Persona");
   }
 
 }
